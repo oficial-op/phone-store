@@ -110,7 +110,14 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
-
+        .foto-producto {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            background-color: #f0f0f0;
+        }
         .tarjeta-producto {
             background-color: white;
             border-radius: 8px;
@@ -291,11 +298,12 @@
     <main class="seccion-productos">
         <h2>Destacados del momento</h2>
         
-        <div class="grid-productos">
+                <div class="grid-productos">
+            <!-- Producto 1 con la imagen real subida -->
             <div class="tarjeta-producto">
-                <div class="foto-producto">[.]</div>
+                <img src="cargador.png.jpg" alt="Cargador Rápido" class="foto-producto">
                 <div class="titulo-producto">Cargador Carga Rápida 20W Tipo C</div>
-                <div class="precio-producto">\$ 45.000</div>
+                <div class="precio-producto">$ 45.000</div>
                 <button class="btn-comprar">Agregar al carrito</button>
             </div>
 
