@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Access | Tienda de Accesorios</title>
+    <!-- Iconos de FontAwesome para el carrito, lupa y usuario -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        /* BARRA DE NAVEGACIÓN ESTILO MODERNO */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: 1px;
+            color: #111;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff; /* Color azul tecnológico al pasar el cursor */
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .nav-icons i {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-icons i:hover {
+            color: #007bff;
+        }
+
+        /* BANNER PRINCIPAL */
+        .hero {
+            background: linear-gradient(135px, #111 0%, #333 100%);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        /* CONTENEDOR DE PRODUCTOS */
+        .seccion-productos {
+            padding: 40px 5%;
+        }
+
+        .seccion-productos h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .tarjeta-producto {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .tarjeta-producto:hover {
+            transform: translateY(-5px);
+        }
+
+        .foto-producto {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .titulo-producto {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .precio-producto {
+            color: #007bff;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn-comprar {
+            background-color: #111;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR BLANCA CON ICONOS -->
+    <nav class="navbar">
+        <div class="logo">PHONE ACCESS</div>
+        
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Cargadores</a></li>
+            <li><a href="#">Forros / Estuches</a></li>
+            <li><a href="#">Audífonos</a></li>
+            <li><a href="#">Ofertas</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <i class="fas fa-search" title="Buscar"></i>
+            <i class="fas fa-user" title="Mi Cuenta"></i>
+            <div style="position: relative; display: inline-block;">
+                <i class="fas fa-shopping-cart" title="Carrito"></i>
+                <span style="position: absolute; top: -10px; right: -10px; background-color: #007bff; color: white; font-size: 10px; padding: 2px 6px; border-radius: 50%;">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BANNER PRINCIPAL DE LA TIENDA -->
+    <header class="hero">
+        <h1>Los mejores accesorios para tu celular</h1>
+        <p>Calidad, protección y carga rápida en un solo lugar</p>
+    </header>
+
+    <!-- SECCIÓN DE PRODUCTOS DESTACADOS -->
+    <main class="seccion-productos">
+        <h2>Destacados del momento</h2>
+        
+        <div class="grid-productos">
+            <!-- Producto 1 -->
+            <div class="tarjeta-producto">
+                <div class="foto-producto">[Imagen Cargador Rápido]</div>
+                <div class="titulo-producto">Cargador Carga Rápida 20W Tipo C</div>
+                <div class="precio-producto">$ 45.000</div>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="tarjeta-producto">
+                <div class="foto-producto">[Imagen Estuche Antigolpes]</div>
+                <div class="titulo-producto">Forro Antigolpes Premium</div>
+                <div class="precio-producto">$ 35.000</div>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="tarjeta-producto">
+                <div class="foto-producto">[Imagen Audífonos Bluetooth]</div>
+                <div class="titulo-producto">Audífonos Inalámbricos Bluetooth</div>
+                <div class="precio-producto">$ 89.000</div>
+                <button class="btn-comprar">Agregar al carrito</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
